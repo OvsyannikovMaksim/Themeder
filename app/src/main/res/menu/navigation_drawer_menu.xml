@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/main_screen_menu_group">
+        <item
+                android:title="@string/main_screen"/>
+    </group>
+
+    <group android:id="@+id/favorites_menu_group">
+        <item
+                android:title="@string/favorites"/>
+    </group>
+    <group android:id="@+id/add_photos_menu_group">
+        <item
+                android:title="@string/add_photo"/>
+    </group>
+    <group android:id="@+id/msettings_menu_group">
+        <item
+                android:title="@string/settings"
+                />
+    </group>
+</menu>
