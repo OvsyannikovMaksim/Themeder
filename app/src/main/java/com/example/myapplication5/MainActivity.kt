@@ -1,6 +1,7 @@
 package com.example.myapplication5
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import com.example.myapplication5.databinding.ActivityMainBinding
@@ -16,6 +17,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.toolbar.setNavigationOnClickListener{
             binding.mainActivity.openDrawer(GravityCompat.START)
+        }
+        binding.navigationView.setNavigationItemSelectedListener { menuItem->
+            val itemId = menuItem.itemId
+            when (itemId) {
+                R.id.main_screen_fragment ->  Log.d("Mainactivity","open main screen fragment")
+                //TODO: Добавить всем пунктам меню id и сделать переходы по фрагментам здесь
+            }
+
+            binding.mainActivity.closeDrawer(GravityCompat.START)
+            true
         }
     }
 }
