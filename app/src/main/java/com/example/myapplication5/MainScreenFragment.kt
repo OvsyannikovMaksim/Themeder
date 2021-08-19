@@ -16,7 +16,8 @@ class MainScreenFragment: Fragment() {
     private lateinit var manager: CardStackLayoutManager
     private lateinit var cardStackView: CardStackView
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?
     ): View {
 
         binding = MainScreenFragmentBinding.inflate(inflater)
