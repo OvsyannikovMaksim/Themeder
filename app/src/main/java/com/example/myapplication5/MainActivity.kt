@@ -17,15 +17,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toolbar.setNavigationOnClickListener{
+        binding.toolbar.setNavigationOnClickListener {
             binding.mainActivity.openDrawer(GravityCompat.START)
         }
 
-        binding.navigationView.setNavigationItemSelectedListener { menuItem->
+        binding.navigationView.setNavigationItemSelectedListener { menuItem ->
             val itemId = menuItem.itemId
             when (itemId) {
-                R.id.main_screen_menu_item ->  Log.d("MainActivity","open main screen fragment")
-                //TODO: Добавить всем пунктам меню id и сделать переходы по фрагментам здесь
+                R.id.main_screen_menu_item -> Log.d("MainActivity", "open main screen fragment")
+                // TODO: Добавить всем пунктам меню id и сделать переходы по фрагментам здесь
             }
 
             binding.mainActivity.closeDrawer(GravityCompat.START)

@@ -16,10 +16,13 @@ class MainScreenFragment: Fragment() {
     private lateinit var manager: CardStackLayoutManager
     private lateinit var cardStackView: CardStackView
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        binding= MainScreenFragmentBinding.inflate(inflater)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?
+    ): View {
+
+        binding = MainScreenFragmentBinding.inflate(inflater)
         manager = CardStackLayoutManager(context)
-        cardStackView=binding.cardStackView
+        cardStackView = binding.cardStackView
         return binding.root
     }
 
@@ -28,8 +31,7 @@ class MainScreenFragment: Fragment() {
         cardStackViewInitialize()
     }
 
-
-    private fun cardStackViewInitialize(){
+    private fun cardStackViewInitialize() {
         manager.setStackFrom(StackFrom.None)
         manager.setSwipeThreshold(0.3f)
         manager.setMaxDegree(20.0f)
