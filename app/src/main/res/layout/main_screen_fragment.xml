@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+            android:id="@+id/card_stack_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+    </com.yuyakaido.android.cardstackview.CardStackView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            app:layout_constraintLeft_toRightOf="@id/guideline2"
+            app:layout_constraintBottom_toBottomOf="@id/guideline3"
+            app:backgroundTint="@color/white"
+            android:src="@drawable/like_24dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/dislike_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            app:layout_constraintRight_toLeftOf="@id/guideline1"
+            app:layout_constraintBottom_toBottomOf="@id/guideline3"
+            android:src="@drawable/dislike_24dp"
+            app:backgroundTint="@color/white" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.35"
+            android:id="@+id/guideline1" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.65"
+            android:id="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.9"
+            android:id="@+id/guideline3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
