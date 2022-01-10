@@ -1,38 +1,40 @@
 package com.example.myapplication5
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ImageView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication5.databinding.CardStackItemBinding
 
-@SuppressLint("ResourceType")
-class CardStackAdapter(context: Context, list: MutableList<String>) :
-    ArrayAdapter<String>(context, R.id.card_stack_item, list) {
+class CardStackAdapter : ListAdapter<Picture, CardStackAdapter.CardStackVH>(DiffCallback) {
 
+    private lateinit var binding: CardStackItemBinding
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val holder: CardStackItemVH
-        val retView: View
-
-        if(convertView==null){
-            val inflater= LayoutInflater.from(context)
-            retView=inflater.inflate(R.id.card_stack_item, parent)
-            holder= CardStackItemVH()
-            holder.image=retView.findViewById(R.id.card_stack_item_image)
-            retView.tag=holder
-        }
-        else{
-            retView=convertView
-            holder = convertView.tag as CardStackItemVH
-        }
-
-        return retView
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardStackVH {
+        val inflater : LayoutInflater = LayoutInflater.from(parent.context)
+        binding = CardStackItemBinding.inflate(inflater, parent, false)
+        return CardStackVH(binding)
     }
 
-    internal class CardStackItemVH{
-        var image: ImageView? = null
+    override fun onBindViewHolder(holder: CardStackVH, position: Int) {
+        holder.bind(currentList[position])
+    }
+
+    class CardStackVH(private var itemBinding: CardStackItemBinding) :
+        RecyclerView.ViewHolder(itemBinding.root){
+        fun bind (picture: Picture){
+            TODO("Not yet implemented")
+        }
+    }
+
+    object DiffCallback : DiffUtil.ItemCallback<Picture>() {
+        override fun areItemsTheSame(oldItem: Picture, newItem: Picture): Boolean {
+            TODO("Not yet implemented")
+        }
+
+        override fun areContentsTheSame(oldItem: Picture, newItem: Picture): Boolean {
+            TODO("Not yet implemented")
+        }
     }
 }
