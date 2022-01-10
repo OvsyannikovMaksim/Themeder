@@ -12,7 +12,7 @@ class CardStackAdapter : ListAdapter<Picture, CardStackAdapter.CardStackVH>(Diff
     private lateinit var binding: CardStackItemBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardStackVH {
-        val inflater : LayoutInflater = LayoutInflater.from(parent.context)
+        val inflater: LayoutInflater = LayoutInflater.from(parent.context)
         binding = CardStackItemBinding.inflate(inflater, parent, false)
         return CardStackVH(binding)
     }
@@ -22,8 +22,8 @@ class CardStackAdapter : ListAdapter<Picture, CardStackAdapter.CardStackVH>(Diff
     }
 
     class CardStackVH(private var itemBinding: CardStackItemBinding) :
-        RecyclerView.ViewHolder(itemBinding.root){
-        fun bind (picture: Picture){
+        RecyclerView.ViewHolder(itemBinding.root) {
+        fun bind(picture: Picture) {
             TODO("Not yet implemented")
         }
     }
