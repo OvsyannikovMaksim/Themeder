@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Themeder</string>
+    <string name="title_photos"> Photos </string>
+    <string name="title_settings"> Settings </string>
+    <string name="title_gallery"> Gallery </string>
 </resources>
